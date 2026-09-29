@@ -1,0 +1,717 @@
+/* =========================================
+   CURIOSO GAMES
+   MORTAL KOMBAT
+========================================= */
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #080808;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(5, 5, 5, 0.96);
+
+    border-bottom: 1px solid #222;
+
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(10px);
+}
+
+
+.logo {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+
+.logo span {
+    color: white;
+}
+
+
+.logo strong {
+    color: #d90000;
+}
+
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: #e00000;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #050505 0%,
+            rgba(5,5,5,0.85) 40%,
+            rgba(5,5,5,0.25) 100%
+        ),
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Liu_Kang_in_Mortal_Kombat_1.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero-content {
+    max-width: 650px;
+}
+
+
+.tag {
+    color: #e00000;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(80px, 13vw, 170px);
+
+    line-height: 0.75;
+
+    letter-spacing: 4px;
+}
+
+
+.hero h1 span {
+    color: #d50000;
+
+    text-shadow:
+        0 0 15px rgba(255, 0, 0, 0.35);
+}
+
+
+.hero-text {
+    margin-top: 35px;
+
+    color: #cccccc;
+
+    line-height: 1.7;
+
+    max-width: 560px;
+
+    font-size: 16px;
+}
+
+
+.button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 15px 28px;
+
+    background: #d00000;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    border-radius: 4px;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 0 20px rgba(200, 0, 0, 0.25);
+}
+
+
+.button:hover {
+    background: #ff0000;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 35px rgba(255, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   SEÇÕES
+========================================= */
+
+.about,
+.games,
+.facts {
+    padding: 110px 8%;
+}
+
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 50px;
+}
+
+
+.section-title span {
+    color: #d00000;
+
+    font-weight: 900;
+
+    font-size: 18px;
+}
+
+
+.section-title h2 {
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 45px;
+
+    letter-spacing: 2px;
+}
+
+
+.section-description {
+    color: #999;
+
+    margin-top: -25px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about {
+    background: #0c0c0c;
+}
+
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 0.7fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+.about-grid p {
+    color: #bbbbbb;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+.quote-box {
+    padding: 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #160000,
+            #090909
+        );
+
+    border-left: 5px solid #d00000;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.4);
+}
+
+
+.quote-box span {
+    color: #e00000;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+.quote-box h3 {
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 55px;
+
+    margin-top: 15px;
+
+    line-height: 0.95;
+}
+
+
+/* =========================================
+   GAMES
+========================================= */
+
+.games {
+    background: #080808;
+}
+
+
+.games-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.game-card {
+    background: #111;
+
+    border: 1px solid #222;
+
+    overflow: hidden;
+
+    transition: 0.35s;
+
+    position: relative;
+}
+
+
+.game-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #b00000;
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,0.6);
+}
+
+
+.game-image {
+    height: 230px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.game-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.8),
+            transparent
+        );
+}
+
+
+.game-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+
+.game-card:hover img {
+    transform: scale(1.08);
+}
+
+
+.year {
+    position: absolute;
+
+    bottom: 15px;
+    left: 15px;
+
+    z-index: 2;
+
+    background: #d00000;
+
+    padding: 7px 12px;
+
+    font-size: 13px;
+
+    font-weight: 900;
+}
+
+
+.game-info {
+    padding: 25px;
+}
+
+
+.game-info h3 {
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 30px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+
+.game-info p {
+    color: #999;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+.destaque {
+    border-color: #d00000;
+
+    box-shadow:
+        0 0 30px rgba(200,0,0,0.12);
+}
+
+
+/* =========================================
+   CURIOSIDADES
+========================================= */
+
+.facts {
+    background: #0c0c0c;
+}
+
+
+.facts-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.fact {
+    padding: 35px 25px;
+
+    background: #111;
+
+    border: 1px solid #222;
+
+    transition: 0.3s;
+}
+
+
+.fact:hover {
+    border-color: #d00000;
+
+    transform: translateY(-5px);
+}
+
+
+.fact > span {
+    color: #d00000;
+
+    font-size: 14px;
+
+    font-weight: 900;
+}
+
+
+.fact h3 {
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 30px;
+
+    margin: 15px 0;
+}
+
+
+.fact p {
+    color: #999;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   HIGHLIGHT
+========================================= */
+
+.highlight {
+    min-height: 450px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #070707,
+            rgba(7,7,7,0.65),
+            #070707
+        ),
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Mortal_Kombat_1_-_Fatality.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.highlight p {
+    color: #e00000;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+}
+
+
+.highlight h2 {
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(55px, 8vw, 100px);
+
+    line-height: 0.85;
+
+    max-width: 650px;
+
+    margin: 15px 0;
+}
+
+
+.highlight span {
+    color: #bbb;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #050505;
+
+    padding: 55px 8%;
+
+    text-align: center;
+
+    border-top: 1px solid #222;
+}
+
+
+.footer-logo {
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 35px;
+
+    letter-spacing: 3px;
+}
+
+
+.footer-logo span {
+    color: #d00000;
+}
+
+
+footer p {
+    color: #777;
+
+    margin-top: 12px;
+
+    font-size: 13px;
+}
+
+
+.copyright {
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .facts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .header {
+        height: 70px;
+
+        padding: 0 5%;
+    }
+
+
+    nav {
+        display: none;
+    }
+
+
+    .hero {
+        padding: 110px 7% 70px;
+
+        background-position: 65% center;
+    }
+
+
+    .hero h1 {
+        font-size: 85px;
+    }
+
+
+    .about,
+    .games,
+    .facts {
+        padding: 80px 6%;
+    }
+
+
+    .section-title h2 {
+        font-size: 35px;
+    }
+
+
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .facts-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .game-image {
+        height: 250px;
+    }
+
+
+    .quote-box h3 {
+        font-size: 45px;
+    }
+
+
+    .highlight {
+        min-height: 400px;
+    }
+
+}
+
+
+/* =========================================
+   ACESSIBILIDADE VLibras
+========================================= */
+
+:root {
+
+    --vlibras-btn-hover-filter: brightness(1.2);
+
+    --vlibras-btn-focus-visible-outline:
+        2px solid #ffffff;
+
+    --vlibras-btn-focus-visible-shadow:
+        0 0 10px 4px #d00000;
+
+}
+
+
