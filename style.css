@@ -1,10 +1,35 @@
-/* =========================================
-   CURIOSO GAMES
-   MORTAL KOMBAT
-========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 
-/* RESET */
+/* ==================================================
+   CONFIGURAÇÕES
+================================================== */
+
+:root {
+
+    --fundo: #070711;
+    --fundo-2: #0d0d1b;
+
+    --card: #121225;
+
+    --roxo: #8b5cf6;
+    --roxo-claro: #a78bfa;
+
+    --azul: #2563eb;
+    --ciano: #22d3ee;
+
+    --rosa: #ec4899;
+
+    --branco: #f8fafc;
+    --cinza: #a7a7bd;
+    --cinza-escuro: #68687b;
+
+    --borda: rgba(255,255,255,.08);
+
+    --sombra:
+        0 20px 60px rgba(0,0,0,.45);
+}
+
 
 * {
     margin: 0;
@@ -19,346 +44,205 @@ html {
 
 
 body {
-    background: #080808;
-    color: #ffffff;
-    font-family: "Inter", sans-serif;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 0%,
+            rgba(139,92,246,.16),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(34,211,238,.10),
+            transparent 30%
+        ),
+
+        var(--fundo);
+
+    color: var(--branco);
+
+    font-family:
+        'DM Sans',
+        sans-serif;
+
+    line-height: 1.6;
+
     overflow-x: hidden;
 }
 
 
-/* =========================================
-   HEADER
-========================================= */
+img {
+    max-width: 100%;
+}
 
-.header {
-    width: 100%;
-    height: 80px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* ==================================================
+   BARRA SUPERIOR
+================================================== */
 
-    padding: 0 7%;
+header {
 
-    background: rgba(5, 5, 5, 0.96);
+    position: sticky;
 
-    border-bottom: 1px solid #222;
-
-    position: fixed;
     top: 0;
-    z-index: 1000;
 
-    backdrop-filter: blur(10px);
+    z-index: 999;
+
+    backdrop-filter: blur(20px);
+
+    background:
+        rgba(7,7,17,.82);
+
+    border-bottom:
+        1px solid var(--borda);
 }
 
 
-.logo {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 30px;
-    letter-spacing: 2px;
-}
+.topo {
 
+    width: 92%;
 
-.logo span {
-    color: white;
-}
+    max-width: 1300px;
 
+    min-height: 78px;
 
-.logo strong {
-    color: #d90000;
-}
-
-
-nav {
-    display: flex;
-    gap: 35px;
-}
-
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-
-    font-size: 14px;
-    font-weight: 700;
-
-    transition: 0.3s;
-}
-
-
-nav a:hover {
-    color: #e00000;
-}
-
-
-/* =========================================
-   HERO
-========================================= */
-
-.hero {
-    min-height: 100vh;
+    margin: auto;
 
     display: flex;
+
     align-items: center;
 
-    padding: 120px 8%;
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.topo h1 {
+
+    font-family:
+        'Archivo Black',
+        sans-serif;
+
+    font-size: 25px;
+
+    letter-spacing: -1px;
+}
+
+
+.topo h1 span {
 
     background:
         linear-gradient(
             90deg,
-            #050505 0%,
-            rgba(5,5,5,0.85) 40%,
-            rgba(5,5,5,0.25) 100%
-        ),
-        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Liu_Kang_in_Mortal_Kombat_1.png");
+            var(--roxo),
+            var(--ciano)
+        );
 
-    background-size: cover;
-    background-position: center;
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
 }
 
 
-.hero-content {
-    max-width: 650px;
+/* MENU */
+
+nav {
+
+    display: flex;
+
+    gap: 8px;
 }
 
 
-.tag {
-    color: #e00000;
+nav a {
 
-    font-size: 14px;
-    font-weight: 800;
+    padding:
+        9px 14px;
 
-    letter-spacing: 4px;
+    border-radius: 10px;
 
-    margin-bottom: 15px;
-}
-
-
-.hero h1 {
-    font-family: "Bebas Neue", sans-serif;
-
-    font-size: clamp(80px, 13vw, 170px);
-
-    line-height: 0.75;
-
-    letter-spacing: 4px;
-}
-
-
-.hero h1 span {
-    color: #d50000;
-
-    text-shadow:
-        0 0 15px rgba(255, 0, 0, 0.35);
-}
-
-
-.hero-text {
-    margin-top: 35px;
-
-    color: #cccccc;
-
-    line-height: 1.7;
-
-    max-width: 560px;
-
-    font-size: 16px;
-}
-
-
-.button {
-    display: inline-block;
-
-    margin-top: 30px;
-
-    padding: 15px 28px;
-
-    background: #d00000;
-
-    color: white;
+    color: var(--cinza);
 
     text-decoration: none;
 
-    font-weight: 800;
+    font-family:
+        'Space Grotesk',
+        sans-serif;
 
-    border-radius: 4px;
+    font-size: 13px;
 
-    transition: 0.3s;
+    font-weight: 600;
 
-    box-shadow:
-        0 0 20px rgba(200, 0, 0, 0.25);
+    transition: .25s;
 }
 
 
-.button:hover {
-    background: #ff0000;
+nav a:hover {
 
-    transform: translateY(-3px);
+    color: white;
 
-    box-shadow:
-        0 0 35px rgba(255, 0, 0, 0.45);
+    background:
+        rgba(139,92,246,.12);
 }
 
 
-/* =========================================
-   SEÇÕES
-========================================= */
+/* ==================================================
+   CONTAINER
+================================================== */
 
-.about,
-.games,
-.facts {
-    padding: 110px 8%;
+section {
+
+    width: 92%;
+
+    max-width: 1300px;
+
+    margin: auto;
+
+    padding:
+        100px 0;
 }
 
 
-.section-title {
-    display: flex;
+/* ==================================================
+   MANCHETE
+================================================== */
 
-    align-items: center;
+.manchete {
 
-    gap: 18px;
-
-    margin-bottom: 50px;
-}
-
-
-.section-title span {
-    color: #d00000;
-
-    font-weight: 900;
-
-    font-size: 18px;
-}
-
-
-.section-title h2 {
-    font-family: "Bebas Neue", sans-serif;
-
-    font-size: 45px;
-
-    letter-spacing: 2px;
-}
-
-
-.section-description {
-    color: #999;
-
-    margin-top: -25px;
-
-    margin-bottom: 35px;
-}
-
-
-/* =========================================
-   ABOUT
-========================================= */
-
-.about {
-    background: #0c0c0c;
-}
-
-
-.about-grid {
     display: grid;
 
-    grid-template-columns: 1fr 0.7fr;
+    grid-template-columns:
+        1.45fr 1fr;
 
-    gap: 70px;
+    min-height: 540px;
 
-    align-items: center;
-}
+    margin-top: 45px;
 
+    overflow: hidden;
 
-.about-grid p {
-    color: #bbbbbb;
+    border-radius: 25px;
 
-    line-height: 1.8;
-
-    margin-bottom: 20px;
-}
-
-
-.quote-box {
-    padding: 45px;
+    border:
+        1px solid var(--borda);
 
     background:
         linear-gradient(
             135deg,
-            #160000,
-            #090909
+            #111124,
+            #0c0c18
         );
 
-    border-left: 5px solid #d00000;
-
     box-shadow:
-        0 20px 50px rgba(0,0,0,0.4);
+        var(--sombra);
 }
 
 
-.quote-box span {
-    color: #e00000;
-
-    font-weight: 800;
-
-    letter-spacing: 3px;
-}
-
-
-.quote-box h3 {
-    font-family: "Bebas Neue", sans-serif;
-
-    font-size: 55px;
-
-    margin-top: 15px;
-
-    line-height: 0.95;
-}
-
-
-/* =========================================
-   GAMES
-========================================= */
-
-.games {
-    background: #080808;
-}
-
-
-.games-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 25px;
-}
-
-
-.game-card {
-    background: #111;
-
-    border: 1px solid #222;
-
-    overflow: hidden;
-
-    transition: 0.35s;
-
-    position: relative;
-}
-
-
-.game-card:hover {
-    transform: translateY(-8px);
-
-    border-color: #b00000;
-
-    box-shadow:
-        0 15px 45px rgba(0,0,0,0.6);
-}
-
-
-.game-image {
-    height: 230px;
+.imagem-manchete {
 
     position: relative;
 
@@ -366,7 +250,8 @@ nav a:hover {
 }
 
 
-.game-image::after {
+.imagem-manchete::after {
+
     content: "";
 
     position: absolute;
@@ -375,342 +260,1122 @@ nav a:hover {
 
     background:
         linear-gradient(
-            to top,
-            rgba(0,0,0,0.8),
-            transparent
+            90deg,
+            transparent 55%,
+            #111124
         );
 }
 
 
-.game-image img {
+.imagem-manchete img {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
 
-    transition: 0.5s;
+    display: block;
+
+    transition:
+        transform .7s ease;
 }
 
 
-.game-card:hover img {
-    transform: scale(1.08);
+.manchete:hover
+.imagem-manchete img {
+
+    transform:
+        scale(1.06);
 }
 
 
-.year {
-    position: absolute;
+.texto-manchete {
 
-    bottom: 15px;
-    left: 15px;
-
-    z-index: 2;
-
-    background: #d00000;
-
-    padding: 7px 12px;
-
-    font-size: 13px;
-
-    font-weight: 900;
-}
-
-
-.game-info {
-    padding: 25px;
-}
-
-
-.game-info h3 {
-    font-family: "Bebas Neue", sans-serif;
-
-    font-size: 30px;
-
-    letter-spacing: 1px;
-
-    margin-bottom: 10px;
-}
-
-
-.game-info p {
-    color: #999;
-
-    line-height: 1.6;
-
-    font-size: 14px;
-}
-
-
-.destaque {
-    border-color: #d00000;
-
-    box-shadow:
-        0 0 30px rgba(200,0,0,0.12);
-}
-
-
-/* =========================================
-   CURIOSIDADES
-========================================= */
-
-.facts {
-    background: #0c0c0c;
-}
-
-
-.facts-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 20px;
-}
-
-
-.fact {
-    padding: 35px 25px;
-
-    background: #111;
-
-    border: 1px solid #222;
-
-    transition: 0.3s;
-}
-
-
-.fact:hover {
-    border-color: #d00000;
-
-    transform: translateY(-5px);
-}
-
-
-.fact > span {
-    color: #d00000;
-
-    font-size: 14px;
-
-    font-weight: 900;
-}
-
-
-.fact h3 {
-    font-family: "Bebas Neue", sans-serif;
-
-    font-size: 30px;
-
-    margin: 15px 0;
-}
-
-
-.fact p {
-    color: #999;
-
-    line-height: 1.7;
-
-    font-size: 14px;
-}
-
-
-/* =========================================
-   HIGHLIGHT
-========================================= */
-
-.highlight {
-    min-height: 450px;
+    padding:
+        55px;
 
     display: flex;
 
-    align-items: center;
+    flex-direction: column;
 
-    padding: 80px 8%;
+    justify-content: center;
+}
+
+
+.categoria {
+
+    width: max-content;
+
+    padding:
+        7px 12px;
+
+    border-radius: 50px;
 
     background:
-        linear-gradient(
-            90deg,
-            #070707,
-            rgba(7,7,7,0.65),
-            #070707
-        ),
-        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Mortal_Kombat_1_-_Fatality.jpg");
+        rgba(139,92,246,.15);
 
-    background-size: cover;
+    border:
+        1px solid rgba(139,92,246,.3);
 
-    background-position: center;
+    color:
+        var(--roxo-claro);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
 }
 
 
-.highlight p {
-    color: #e00000;
+.texto-manchete h2 {
 
-    font-weight: 900;
+    font-family:
+        'Archivo Black',
+        sans-serif;
 
-    letter-spacing: 4px;
+    font-size:
+        clamp(38px, 4vw, 62px);
+
+    line-height:
+        1.02;
+
+    letter-spacing:
+        -2px;
 }
 
 
-.highlight h2 {
-    font-family: "Bebas Neue", sans-serif;
+.texto-manchete > p:not(.categoria) {
 
-    font-size: clamp(55px, 8vw, 100px);
+    color:
+        var(--cinza);
 
-    line-height: 0.85;
-
-    max-width: 650px;
-
-    margin: 15px 0;
-}
-
-
-.highlight span {
-    color: #bbb;
+    margin-top: 22px;
 
     font-size: 15px;
 }
 
 
-/* =========================================
-   FOOTER
-========================================= */
+/* BOTÃO */
+
+button {
+
+    width: max-content;
+
+    margin-top: 30px;
+
+    padding:
+        13px 20px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    color: white;
+
+    font-family:
+        'Space Grotesk',
+        sans-serif;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--roxo),
+            var(--azul)
+        );
+
+    box-shadow:
+        0 10px 30px
+        rgba(99,102,241,.25);
+
+    transition:
+        transform .2s,
+        box-shadow .2s;
+}
+
+
+button:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(99,102,241,.4);
+}
+
+
+/* ==================================================
+   TÍTULOS
+================================================== */
+
+.titulo {
+
+    margin-bottom:
+        40px;
+}
+
+
+.titulo p {
+
+    color:
+        var(--ciano);
+
+    font-family:
+        'Space Grotesk',
+        sans-serif;
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        3px;
+
+    margin-bottom:
+        10px;
+}
+
+
+.titulo h2 {
+
+    font-family:
+        'Archivo Black',
+        sans-serif;
+
+    font-size:
+        clamp(35px, 5vw, 58px);
+
+    letter-spacing:
+        -2px;
+
+    line-height:
+        1;
+}
+
+
+/* ==================================================
+   CARDS DE NOTÍCIAS
+================================================== */
+
+.noticias {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.noticias article {
+
+    overflow: hidden;
+
+    border-radius:
+        18px;
+
+    background:
+        var(--card);
+
+    border:
+        1px solid var(--borda);
+
+    transition:
+        transform .3s,
+        border .3s,
+        box-shadow .3s;
+}
+
+
+.noticias article:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(139,92,246,.5);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.35);
+}
+
+
+.noticias img {
+
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.noticias article > *:not(img) {
+
+    margin-left:
+        22px;
+
+    margin-right:
+        22px;
+}
+
+
+.noticias small {
+
+    display: inline-block;
+
+    margin-top:
+        20px;
+
+    color:
+        var(--ciano);
+
+    font-family:
+        'Space Grotesk',
+        sans-serif;
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        2px;
+}
+
+
+.noticias h3 {
+
+    margin-top:
+        10px;
+
+    font-family:
+        'Archivo Black',
+        sans-serif;
+
+    font-size:
+        22px;
+
+    line-height:
+        1.15;
+}
+
+
+.noticias p {
+
+    color:
+        var(--cinza);
+
+    font-size:
+        13px;
+
+    margin-top:
+        12px;
+}
+
+
+.noticias a {
+
+    display:
+        inline-block;
+
+    margin-top:
+        20px;
+
+    margin-bottom:
+        24px;
+
+    color:
+        var(--roxo-claro);
+
+    text-decoration:
+        none;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+}
+
+
+/* ==================================================
+   HISTÓRIA
+================================================== */
+
+.historia {
+
+    width: 100%;
+
+    max-width: none;
+
+    padding-left:
+        max(4%, calc((100% - 1300px) / 2));
+
+    padding-right:
+        max(4%, calc((100% - 1300px) / 2));
+
+    background:
+
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(139,92,246,.10),
+            transparent 35%
+        ),
+
+        var(--fundo-2);
+
+    border-top:
+        1px solid var(--borda);
+
+    border-bottom:
+        1px solid var(--borda);
+}
+
+
+.texto-historia {
+
+    max-width:
+        900px;
+}
+
+
+.texto-historia h3 {
+
+    margin-top:
+        35px;
+
+    color:
+        var(--roxo-claro);
+
+    font-family:
+        'Archivo Black',
+        sans-serif;
+
+    font-size:
+        25px;
+}
+
+
+.texto-historia p {
+
+    color:
+        var(--cinza);
+
+    margin-top:
+        10px;
+
+    font-size:
+        15px;
+}
+
+
+/* ==================================================
+   JOGOS
+================================================== */
+
+.galeria-jogos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.game-card {
+
+    position: relative;
+
+    height:
+        350px;
+
+    overflow: hidden;
+
+    border-radius:
+        18px;
+
+    border:
+        1px solid var(--borda);
+
+    background:
+        #10101e;
+
+    transition:
+        transform .3s,
+        border-color .3s;
+}
+
+
+.game-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        var(--ciano);
+}
+
+
+.game-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform .5s,
+        filter .5s;
+}
+
+
+.game-card:hover img {
+
+    transform:
+        scale(1.08);
+
+    filter:
+        brightness(.55);
+}
+
+
+.game-info {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    padding:
+        60px 20px 20px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(5,5,15,.98)
+        );
+}
+
+
+.game-info .ano {
+
+    color:
+        var(--ciano);
+
+    font-family:
+        'Space Grotesk',
+        sans-serif;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+}
+
+
+.game-info h3 {
+
+    font-family:
+        'Archivo Black',
+        sans-serif;
+
+    font-size:
+        22px;
+}
+
+
+/* ==================================================
+   PERSONAGENS
+================================================== */
+
+.personagens {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.personagem {
+
+    position:
+        relative;
+
+    height:
+        430px;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        20px;
+
+    background:
+        var(--card);
+
+    border:
+        1px solid var(--borda);
+
+    transition:
+        transform .3s;
+}
+
+
+.personagem:hover {
+
+    transform:
+        translateY(-8px);
+}
+
+
+.personagem img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    display:
+        block;
+
+    transition:
+        transform .5s;
+}
+
+
+.personagem:hover img {
+
+    transform:
+        scale(1.07);
+}
+
+
+.personagem-info {
+
+    position:
+        absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    right: 0;
+
+    padding:
+        70px 22px 22px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(5,5,15,.98)
+        );
+}
+
+
+.personagem-info h3 {
+
+    font-family:
+        'Archivo Black',
+        sans-serif;
+
+    font-size:
+        25px;
+}
+
+
+.personagem-info p {
+
+    color:
+        #b5b5c7;
+
+    font-size:
+        12px;
+
+    margin-top:
+        4px;
+}
+
+
+/* ==================================================
+   TABELA
+================================================== */
+
+.games {
+
+    width: 100%;
+
+    max-width: none;
+
+    padding-left:
+        max(4%, calc((100% - 1300px) / 2));
+
+    padding-right:
+        max(4%, calc((100% - 1300px) / 2));
+
+    background:
+        var(--fundo-2);
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse:
+        separate;
+
+    border-spacing:
+        0;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        15px;
+
+    background:
+        #111122;
+
+    border:
+        1px solid var(--borda);
+}
+
+
+th {
+
+    padding:
+        18px;
+
+    text-align:
+        left;
+
+    background:
+        linear-gradient(
+            90deg,
+            #392080,
+            #173d76
+        );
+
+    font-family:
+        'Space Grotesk',
+        sans-serif;
+}
+
+
+td {
+
+    padding:
+        17px;
+
+    color:
+        var(--cinza);
+
+    border-top:
+        1px solid var(--borda);
+}
+
+
+tr:hover td {
+
+    color:
+        white;
+
+    background:
+        rgba(139,92,246,.06);
+}
+
+
+/* ==================================================
+   CURIOSIDADES
+================================================== */
+
+.curiosidades-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.curiosidades-grid div {
+
+    padding:
+        32px;
+
+    border-radius:
+        18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #14142a,
+            #0d0d19
+        );
+
+    border:
+        1px solid var(--borda);
+}
+
+
+.curiosidades-grid span {
+
+    font-family:
+        'Archivo Black',
+        sans-serif;
+
+    font-size:
+        42px;
+
+    color:
+        var(--roxo-claro);
+}
+
+
+.curiosidades-grid h3 {
+
+    font-family:
+        'Archivo Black',
+        sans-serif;
+
+    margin-top:
+        10px;
+}
+
+
+.curiosidades-grid p {
+
+    color:
+        var(--cinza);
+
+    font-size:
+        13px;
+
+    margin-top:
+        8px;
+}
+
+
+/* ==================================================
+   FONTES
+================================================== */
+
+.fontes {
+
+    width:
+        100%;
+
+    max-width:
+        none;
+
+    padding-left:
+        max(4%, calc((100% - 1300px) / 2));
+
+    padding-right:
+        max(4%, calc((100% - 1300px) / 2));
+
+    background:
+        #05050d;
+}
+
+
+.fontes a {
+
+    display:
+        block;
+
+    padding:
+        17px 20px;
+
+    margin-bottom:
+        10px;
+
+    border-radius:
+        12px;
+
+    background:
+        #10101d;
+
+    border:
+        1px solid var(--borda);
+
+    color:
+        var(--cinza);
+
+    text-decoration:
+        none;
+
+    transition:
+        .2s;
+}
+
+
+.fontes a:hover {
+
+    color:
+        white;
+
+    border-color:
+        var(--ciano);
+
+    transform:
+        translateX(5px);
+}
+
+
+/* ==================================================
+   RODAPÉ
+================================================== */
 
 footer {
-    background: #050505;
 
-    padding: 55px 8%;
+    padding:
+        70px 20px;
 
-    text-align: center;
+    text-align:
+        center;
 
-    border-top: 1px solid #222;
+    background:
+        #040409;
+
+    border-top:
+        1px solid var(--borda);
 }
 
 
-.footer-logo {
-    font-family: "Bebas Neue", sans-serif;
+footer h2 {
 
-    font-size: 35px;
+    font-family:
+        'Archivo Black',
+        sans-serif;
 
-    letter-spacing: 3px;
+    font-size:
+        30px;
 }
 
 
-.footer-logo span {
-    color: #d00000;
+footer span {
+
+    color:
+        var(--roxo-claro);
 }
 
 
 footer p {
-    color: #777;
 
-    margin-top: 12px;
+    color:
+        var(--cinza-escuro);
 
-    font-size: 13px;
+    font-size:
+        12px;
+
+    margin-top:
+        8px;
 }
 
 
-.copyright {
-    margin-top: 30px;
+/* ==================================================
+   VLibras
+================================================== */
+
+/*
+   O VLibras é carregado pelo próprio script oficial
+   do Governo Federal no HTML.
+
+   Estas regras apenas evitam que elementos do site
+   fiquem por cima do botão do VLibras.
+*/
+
+[vw-access-button] {
+
+    z-index:
+        999999 !important;
 }
 
 
-/* =========================================
-   RESPONSIVO
-========================================= */
+[vw-plugin-wrapper] {
 
-@media (max-width: 1000px) {
+    z-index:
+        999999 !important;
+}
 
-    .games-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+/* ==================================================
+   RESPONSIVIDADE
+================================================== */
+
+@media (max-width: 1100px) {
+
+    .galeria-jogos {
+
+        grid-template-columns:
+            repeat(3, 1fr);
     }
 
-    .facts-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
-    .about-grid {
-        grid-template-columns: 1fr;
+    .personagens {
+
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
 }
 
 
-@media (max-width: 650px) {
+@media (max-width: 850px) {
 
-    .header {
-        height: 70px;
+    .manchete {
 
-        padding: 0 5%;
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .imagem-manchete {
+
+        height:
+            350px;
+    }
+
+
+    .imagem-manchete::after {
+
+        background:
+            linear-gradient(
+                0deg,
+                #111124,
+                transparent
+            );
+    }
+
+
+    .noticias {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .galeria-jogos {
+
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
 
     nav {
-        display: none;
-    }
 
-
-    .hero {
-        padding: 110px 7% 70px;
-
-        background-position: 65% center;
-    }
-
-
-    .hero h1 {
-        font-size: 85px;
-    }
-
-
-    .about,
-    .games,
-    .facts {
-        padding: 80px 6%;
-    }
-
-
-    .section-title h2 {
-        font-size: 35px;
-    }
-
-
-    .games-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .facts-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .game-image {
-        height: 250px;
-    }
-
-
-    .quote-box h3 {
-        font-size: 45px;
-    }
-
-
-    .highlight {
-        min-height: 400px;
+        display:
+            none;
     }
 
 }
 
 
-/* =========================================
-   ACESSIBILIDADE VLibras
-========================================= */
+@media (max-width: 550px) {
 
-:root {
+    section {
 
-    --vlibras-btn-hover-filter: brightness(1.2);
+        width:
+            90%;
 
-    --vlibras-btn-focus-visible-outline:
-        2px solid #ffffff;
+        padding:
+            70px 0;
+    }
 
-    --vlibras-btn-focus-visible-shadow:
-        0 0 10px 4px #d00000;
+
+    .texto-manchete {
+
+        padding:
+            30px;
+    }
+
+
+    .texto-manchete h2 {
+
+        font-size:
+            38px;
+    }
+
+
+    .noticias,
+    .personagens,
+    .galeria-jogos,
+    .curiosidades-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .game-card {
+
+        height:
+            400px;
+    }
+
+
+    .personagem {
+
+        height:
+            470px;
+    }
+
+
+    .titulo h2 {
+
+        font-size:
+            38px;
+    }
+
+
+    table {
+
+        font-size:
+            12px;
+    }
+
+
+    th,
+    td {
+
+        padding:
+            12px 9px;
+    }
 
 }
 
