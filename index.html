@@ -1,64 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CURIOSO GAMES | Mortal Kombat</title>
+    <title>Curioso Mundo | Acessibilidade</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<footer>
+    <!-- ================= ACESSIBILIDADE ================= -->
 
-    <h2>MORTAL <span>KOMBAT</span></h2>
+    <aside class="accessibility" aria-label="Ferramentas de acessibilidade">
 
-    <p>
-        Portal fictício criado para fins educacionais.
-    </p>
+        <h2>♿ Acessibilidade</h2>
 
-</footer>
+        <button id="contrastBtn">
+            ◐ Alto contraste
+        </button>
 
+        <button id="fontPlus">
+            A+ Aumentar texto
+        </button>
 
-<!-- =========================
-     TRADUTOR DE LIBRAS
-     VLibras - Governo Federal
-========================= -->
+        <button id="fontMinus">
+            A− Diminuir texto
+        </button>
 
-<div vw class="enabled">
+        <button id="focusBtn">
+            🧠 Modo conforto
+        </button>
 
-    <div vw-access-button class="active"></div>
+        <button id="animationBtn">
+            ⏸ Reduzir animações
+        </button>
 
-    <div vw-plugin-wrapper>
+        <button id="readBtn">
+            🔊 Ler página
+        </button>
 
-        <div class="vw-plugin-top-wrapper"></div>
+        <button id="stopReadBtn">
+            ⏹ Parar leitura
+        </button>
 
-    </div>
+        <button id="resetBtn">
+            ↺ Restaurar
+        </button>
 
-</div>
-
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-
-<script>
-    new window.VLibras.Widget(
-        'https://vlibras.gov.br/app'
-    );
-</script>
-
-
-<!-- JavaScript do site -->
-
-<script src="script.js"></script>
-
-</body>
-</html>
+    </aside>
 
 
     <!-- ================= HEADER ================= -->
@@ -67,14 +64,14 @@
 
         <div class="logo">
             <span>CURIOSO</span>
-            <strong>GAMES</strong>
+            <strong>MUNDO</strong>
         </div>
 
-        <nav>
+        <nav aria-label="Navegação principal">
             <a href="#inicio">Início</a>
-            <a href="#historia">História</a>
-            <a href="#jogos">Jogos</a>
             <a href="#curiosidades">Curiosidades</a>
+            <a href="#ajuda">Ajuda</a>
+            <a href="#acessibilidade">Acessibilidade</a>
         </nav>
 
     </header>
@@ -82,419 +79,364 @@
 
     <!-- ================= HERO ================= -->
 
-    <section class="hero" id="inicio">
+    <main>
 
-        <div class="hero-content">
+        <section class="hero" id="inicio">
 
-            <p class="tag">CURIOSO GAMES APRESENTA</p>
+            <div class="hero-content">
 
-            <h1>
-                MORTAL<br>
-                <span>KOMBAT</span>
-            </h1>
+                <span class="tag">
+                    🌎 CONHECIMENTO PARA TODOS
+                </span>
 
-            <p class="hero-text">
-                Do arcade de 1992 ao universo de Mortal Kombat 1.
-                Conheça a evolução de uma das franquias mais conhecidas
-                dos jogos de luta.
-            </p>
-
-            <a href="#jogos" class="button">
-                EXPLORAR A SAGA
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= SOBRE ================= -->
-
-    <section class="about" id="historia">
-
-        <div class="section-title">
-            <span>01</span>
-            <h2>UMA SAGA VIOLENTA DE HISTÓRIA</h2>
-        </div>
-
-        <div class="about-grid">
-
-            <div>
-                <p>
-                    Mortal Kombat surgiu nos arcades em 1992 e rapidamente
-                    chamou atenção por seus gráficos digitalizados,
-                    personagens marcantes e sistema de combate.
-                </p>
+                <h1>
+                    DESCUBRA O
+                    <span>MUNDO</span>
+                </h1>
 
                 <p>
-                    Ao longo das décadas, a série passou por diferentes
-                    gerações, consoles e mudanças de desenvolvedoras,
-                    mantendo personagens clássicos como Scorpion,
-                    Sub-Zero, Liu Kang e Raiden.
+                    Um espaço criado para aprender, descobrir curiosidades
+                    e tornar a internet mais acessível para todos.
                 </p>
+
+                <a href="#curiosidades" class="button">
+                    EXPLORAR CURIOSIDADES
+                </a>
+
             </div>
 
-            <div class="quote-box">
-                <span>1992 → 2023</span>
-                <h3>
-                    MAIS DE 30 ANOS
-                    DE KOMBAT
-                </h3>
+            <div class="hero-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=80"
+                    alt="Vista do planeta Terra e do horizonte"
+                >
+
             </div>
 
-        </div>
+        </section>
 
-    </section>
 
+        <!-- ================= ACESSIBILIDADE ================= -->
 
-    <!-- ================= JOGOS ================= -->
+        <section class="access-section" id="acessibilidade">
 
-    <section class="games" id="jogos">
-
-        <div class="section-title">
-            <span>02</span>
-            <h2>A EVOLUÇÃO DOS JOGOS</h2>
-        </div>
-
-        <p class="section-description">
-            Confira alguns dos principais capítulos da franquia.
-        </p>
-
-
-        <div class="games-grid">
-
-
-            <!-- MK 1992 -->
-
-            <article class="game-card">
-
-                <div class="game-image">
-                    <img
-                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/MortalKombat1992LegacyScreenshot.png"
-                        alt="Mortal Kombat de 1992">
-                    <span class="year">1992</span>
-                </div>
-
-                <div class="game-info">
-
-                    <h3>Mortal Kombat</h3>
-
-                    <p>
-                        O jogo que iniciou a franquia nos arcades,
-                        apresentando personagens como Scorpion,
-                        Sub-Zero, Liu Kang e Raiden.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- MK II -->
-
-            <article class="game-card">
-
-                <div class="game-image">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Mortal_Kombat_II_arcade.jpg/1280px-Mortal_Kombat_II_arcade.jpg"
-                        alt="Mortal Kombat II">
-                    <span class="year">1993</span>
-                </div>
-
-                <div class="game-info">
-
-                    <h3>Mortal Kombat II</h3>
-
-                    <p>
-                        A sequência ampliou o elenco e trouxe
-                        novos cenários, golpes e personagens.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- MK III -->
-
-            <article class="game-card">
-
-                <div class="game-image">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Mortal_Kombat_3_arcade.jpg/1280px-Mortal_Kombat_3_arcade.jpg"
-                        alt="Mortal Kombat 3">
-                    <span class="year">1995</span>
-                </div>
-
-                <div class="game-info">
-
-                    <h3>Mortal Kombat 3</h3>
-
-                    <p>
-                        A terceira edição trouxe novos personagens,
-                        mecânicas e o sistema de corrida.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- UMK3 -->
-
-            <article class="game-card">
-
-                <div class="game-image">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Ultimate_Mortal_Kombat_3_arcade.jpg/1280px-Ultimate_Mortal_Kombat_3_arcade.jpg"
-                        alt="Ultimate Mortal Kombat 3">
-                    <span class="year">1995</span>
-                </div>
-
-                <div class="game-info">
-
-                    <h3>Ultimate Mortal Kombat 3</h3>
-
-                    <p>
-                        Uma versão expandida de MK3 com mais
-                        personagens e melhorias.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- MK4 -->
-
-            <article class="game-card">
-
-                <div class="game-image">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mortal_Kombat_4_arcade.jpg/1280px-Mortal_Kombat_4_arcade.jpg"
-                        alt="Mortal Kombat 4">
-                    <span class="year">1997</span>
-                </div>
-
-                <div class="game-info">
-
-                    <h3>Mortal Kombat 4</h3>
-
-                    <p>
-                        Marcou a chegada da série principal
-                        aos gráficos tridimensionais.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- DEADLY ALLIANCE -->
-
-            <article class="game-card">
-
-                <div class="game-image">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Mortal_Kombat_Deadly_Alliance.jpg/1280px-Mortal_Kombat_Deadly_Alliance.jpg"
-                        alt="Mortal Kombat Deadly Alliance">
-                    <span class="year">2002</span>
-                </div>
-
-                <div class="game-info">
-
-                    <h3>Deadly Alliance</h3>
-
-                    <p>
-                        A franquia retornou aos consoles com
-                        uma nova geração de combate em 3D.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- DECEPTION -->
-
-            <article class="game-card">
-
-                <div class="game-image">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Mortal_Kombat_Deception.jpg/1280px-Mortal_Kombat_Deception.jpg"
-                        alt="Mortal Kombat Deception">
-                    <span class="year">2004</span>
-                </div>
-
-                <div class="game-info">
-
-                    <h3>Deception</h3>
-
-                    <p>
-                        O jogo trouxe modos adicionais e expandiu
-                        bastante o universo da série.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- ARMAGEDDON -->
-
-            <article class="game-card">
-
-                <div class="game-image">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Mortal_Kombat_Armageddon.jpg/1280px-Mortal_Kombat_Armageddon.jpg"
-                        alt="Mortal Kombat Armageddon">
-                    <span class="year">2006</span>
-                </div>
-
-                <div class="game-info">
-
-                    <h3>Armageddon</h3>
-
-                    <p>
-                        Reuniu uma enorme quantidade de personagens
-                        da história da franquia.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- MK 2011 -->
-
-            <article class="game-card">
-
-                <div class="game-image">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Mortal_Kombat_2011.jpg/1280px-Mortal_Kombat_2011.jpg"
-                        alt="Mortal Kombat 2011">
-                    <span class="year">2011</span>
-                </div>
-
-                <div class="game-info">
-
-                    <h3>Mortal Kombat</h3>
-
-                    <p>
-                        O reboot de 2011 recontou acontecimentos
-                        dos primeiros jogos da franquia.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- MK X -->
-
-            <article class="game-card">
-
-                <div class="game-image">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Mortal_Kombat_X_cover.jpg/1280px-Mortal_Kombat_X_cover.jpg"
-                        alt="Mortal Kombat X">
-                    <span class="year">2015</span>
-                </div>
-
-                <div class="game-info">
-
-                    <h3>Mortal Kombat X</h3>
-
-                    <p>
-                        Apresentou uma nova geração de lutadores
-                        e continuou a história estabelecida no reboot.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- MK11 -->
-
-            <article class="game-card">
-
-                <div class="game-image">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Mortal_Kombat_11_cover.jpg/1280px-Mortal_Kombat_11_cover.jpg"
-                        alt="Mortal Kombat 11">
-                    <span class="year">2019</span>
-                </div>
-
-                <div class="game-info">
-
-                    <h3>Mortal Kombat 11</h3>
-
-                    <p>
-                        O jogo apresentou uma história envolvendo
-                        diferentes momentos da linha temporal.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <!-- MK1 -->
-
-            <article class="game-card destaque">
-
-                <div class="game-image">
-
-                    <img
-                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Liu_Kang_in_Mortal_Kombat_1.png"
-                        alt="Liu Kang em Mortal Kombat 1">
-
-                    <span class="year">2023</span>
-
-                </div>
-
-                <div class="game-info">
-
-                    <h3>Mortal Kombat 1</h3>
-
-                    <p>
-                        Uma nova era criada por Liu Kang,
-                        apresentando uma nova interpretação do universo
-                        de Mortal Kombat.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= CURIOSIDADES ================= -->
-
-    <section class="facts" id="curiosidades">
-
-        <div class="section-title">
-            <span>03</span>
-            <h2>CURIOSIDADES</h2>
-        </div>
-
-
-        <div class="facts-grid">
-
-            <div class="fact">
+            <div class="section-title">
 
                 <span>01</span>
 
-                <h3>SCORPION</h3>
+                <div>
+                    <p>INCLUSÃO DIGITAL</p>
+                    <h2>UM SITE PARA TODOS</h2>
+                </div>
+
+            </div>
+
+
+            <div class="access-grid">
+
+                <article class="access-card">
+
+                    <div class="icon">👁️</div>
+
+                    <h3>Baixa visão</h3>
+
+                    <p>
+                        Aumente ou diminua o tamanho dos textos e utilize
+                        o alto contraste para facilitar a leitura.
+                    </p>
+
+                </article>
+
+
+                <article class="access-card">
+
+                    <div class="icon">🔊</div>
+
+                    <h3>Pessoas cegas</h3>
+
+                    <p>
+                        O site possui textos alternativos nas imagens e
+                        uma ferramenta de leitura utilizando a voz do navegador.
+                    </p>
+
+                </article>
+
+
+                <article class="access-card">
+
+                    <div class="icon">🤟</div>
+
+                    <h3>Pessoas surdas</h3>
+
+                    <p>
+                        O VLibras pode traduzir conteúdos da página
+                        para Língua Brasileira de Sinais.
+                    </p>
+
+                </article>
+
+
+                <article class="access-card">
+
+                    <div class="icon">🧠</div>
+
+                    <h3>Pessoas autistas</h3>
+
+                    <p>
+                        O modo conforto reduz animações e estímulos visuais,
+                        deixando a navegação mais tranquila.
+                    </p>
+
+                </article>
+
+
+                <article class="access-card">
+
+                    <div class="icon">⌨️</div>
+
+                    <h3>Navegação por teclado</h3>
+
+                    <p>
+                        Links e botões possuem foco visível para facilitar
+                        a navegação sem utilizar mouse.
+                    </p>
+
+                </article>
+
+
+                <article class="access-card">
+
+                    <div class="icon">♿</div>
+
+                    <h3>Mobilidade</h3>
+
+                    <p>
+                        Botões grandes e espaçados facilitam a interação
+                        para pessoas com dificuldades motoras.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CURIOSIDADES ================= -->
+
+        <section class="curiosities" id="curiosidades">
+
+            <div class="section-title">
+
+                <span>02</span>
+
+                <div>
+                    <p>VOCÊ SABIA?</p>
+                    <h2>CURIOSIDADES DO MUNDO</h2>
+                </div>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <article class="card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=900&q=80"
+                        alt="Céu estrelado durante a noite"
+                    >
+
+                    <div>
+
+                        <span>🌌 ESPAÇO</span>
+
+                        <h3>
+                            O universo é gigantesco
+                        </h3>
+
+                        <p>
+                            Existem bilhões de galáxias observáveis,
+                            e muitas delas possuem bilhões de estrelas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+                        alt="Montanhas cobertas por neve"
+                    >
+
+                    <div>
+
+                        <span>🏔️ NATUREZA</span>
+
+                        <h3>
+                            A Terra possui lugares extremos
+                        </h3>
+
+                        <p>
+                            Existem regiões extremamente frias,
+                            quentes, secas e úmidas espalhadas pelo planeta.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=80"
+                        alt="Floresta tropical"
+                    >
+
+                    <div>
+
+                        <span>🌳 NATUREZA</span>
+
+                        <h3>
+                            As florestas são essenciais
+                        </h3>
+
+                        <p>
+                            Elas ajudam a armazenar carbono, abrigam
+                            inúmeras espécies e participam do ciclo da água.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1496568816309-51d7c20e3b21?auto=format&fit=crop&w=900&q=80"
+                        alt="Cidade iluminada durante a noite"
+                    >
+
+                    <div>
+
+                        <span>🏙️ CIDADES</span>
+
+                        <h3>
+                            Cidades nunca param completamente
+                        </h3>
+
+                        <p>
+                            Em diferentes fusos horários, sempre existe
+                            alguma parte do planeta começando um novo dia.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= AJUDA ================= -->
+
+        <section class="help" id="ajuda">
+
+            <div class="help-content">
+
+                <span>03</span>
+
+                <h2>PRECISA DE AJUDA?</h2>
 
                 <p>
-                    Scorpion é um dos personagens mais conhecidos
-                   
-          
+                    Se alguma ferramenta estiver dificultando sua experiência,
+                    você pode desativá-la pelo painel de acessibilidade.
+                </p>
+
+                <div class="help-list">
+
+                    <div>
+                        <strong>🔊 Leitura</strong>
+                        <span>Use o botão "Ler página".</span>
+                    </div>
+
+                    <div>
+                        <strong>👁️ Visão</strong>
+                        <span>Use o contraste e o tamanho da fonte.</span>
+                    </div>
+
+                    <div>
+                        <strong>🤟 Libras</strong>
+                        <span>Utilize o botão do VLibras.</span>
+                    </div>
+
+                    <div>
+                        <strong>🧠 Conforto</strong>
+                        <span>Ative o modo conforto para reduzir estímulos.</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h2>CURIOSO <span>MUNDO</span></h2>
+
+        <p>
+            Conhecimento, inclusão e acessibilidade para todos.
+        </p>
+
+        <small>
+            Projeto educacional.
+        </small>
+
+    </footer>
+
+
+    <!-- ================= VLIBRAS ================= -->
+
+    <div vw class="enabled">
+
+        <div vw-access-button class="active"></div>
+
+        <div vw-plugin-wrapper>
+
+            <div class="vw-plugin-top-wrapper"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        new window.VLibras.Widget(
+            'https://vlibras.gov.br/app'
+        );
+    </script>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
 
 
